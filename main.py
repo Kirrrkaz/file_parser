@@ -8,11 +8,16 @@ with open("index.html", encoding='utf-8') as file:
 
 soup = BeautifulSoup(src, 'html.parser')
 
-#title = soup.title
-#print(title.text)
+user_name = soup.find("div", class_="user__name")
+print('User name: ', user_name.text)
+
+
+
+title = soup.title
+print(title.text)
 
 links = soup.find_all("a")
-#print(links)
+print(links)
 print('List of the users social networks:')
 for item in links:
     print(item.text)
