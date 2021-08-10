@@ -11,7 +11,13 @@ soup = BeautifulSoup(src, 'html.parser')
 #title = soup.title
 #print(title.text)
 
-links = soup.find_all("li")
-print(links)
+links = soup.find_all("a")
+#print(links)
+print('List of the users social networks:')
+for item in links:
+    print(item.text)
+
+k = input("press to exit")
+
 
 
